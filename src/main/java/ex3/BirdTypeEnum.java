@@ -12,10 +12,7 @@ public enum BirdTypeEnum  {
             return Sparrow.toString() + " fly";
         default:
             return this.toString() + " fly";
-        }
-        
-        
-        
+        }   
     }
 
     public String getVoice() {

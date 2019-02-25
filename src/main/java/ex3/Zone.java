@@ -1,32 +1,32 @@
 package ex3;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import ex3.corrige1.Animal;
 
 public abstract class Zone {
 
-	private List<String> types;
-	private List<String> noms;
-	private List<String> comportements;
+		
+	protected List<Animal> listeAnimaux = new ArrayList<>();
 	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
+
+	public void addAnimal(Animal animal) {
+		listeAnimaux.add(animal);
 	}
+	
 	
 	public void afficherListeAnimaux(){
-		for (String nom: noms){
-			System.out.println(nom);
-		}
+		for (Animal nomAnimaux : listeAnimaux){
+		System.out.println(nomAnimaux.getNom());
+	 	}
 	}
 	
-	public int compterAnimaux(){
-		return noms.size();
+	public final int compterAnimaux() {
+		return listeAnimaux.size();
 	}
 	
-	public abstract double getPoids();
+	public abstract double calculerKgsNourritureParJour();
 	
-	public double calculerKgsNourritureParJour(){
-		return noms.size() * getPoids();
-	}
+	public  abstract double getPoids();		
 }

@@ -15,5 +15,4 @@ public class ZooApplication {
 		zoo.addAnimal("Boa constrictor", "SERPENT", "CARNIVORE");
 		zoo.addAnimal("Python", "SERPENT", "CARNIVORE");
 	}
-
 }
